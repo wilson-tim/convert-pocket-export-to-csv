@@ -37,6 +37,8 @@ if __name__ == "__main__":
 	csvfile = "pocket_export.csv"
 	file_to_delete = open(csvfile,'w')
 	file_to_delete.close()
+	header = ["time_added", "title", "tags", "href"]
+	write_to_csv(csvfile, header)
 	result = extract(sourcefile, csvfile)
 	if result == True:
 		print("All done")
